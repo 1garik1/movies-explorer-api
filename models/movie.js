@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const isUrl = require('validator/lib/isURL');
 
 const movieSchema = new mongoose.Schema({
@@ -31,7 +30,7 @@ const movieSchema = new mongoose.Schema({
       message: 'Некорректный адрес URL',
     },
   },
-  trailer: {
+  trailerLink: {
     type: String,
     required: true,
     validate: {

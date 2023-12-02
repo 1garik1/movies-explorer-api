@@ -1,6 +1,7 @@
 const { JWT_SECRET, NODE_ENV } = process.env;
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 const jwt = require('jsonwebtoken');
+
 const bcrypt = require('bcryptjs');
 const NotFound = require('../errors/NotFound');
 const ConflictError = require('../errors/ConflictError');
