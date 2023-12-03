@@ -11,3 +11,6 @@
 -Winston;
 -celebrate;
 ###ссылка на репозиторий:
+https://github.com/1garik1/movies-explorer-api/pull/1/files
+###ссылка на сервер:
+https://domain.diplomkaigor.nomoredomainsmonster.ru/
