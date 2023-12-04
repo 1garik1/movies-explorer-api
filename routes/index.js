@@ -14,8 +14,6 @@ router.use(auth);
 router.use('/users', userRouter);
 router.use('/movies', movieRouter);
 
-router.use(auth, movieRouter);
-
 router.use('*', (req, res, next) => {
   next(new NotFound('Запрашиваемая страница не существует'));
 });
