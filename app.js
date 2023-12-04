@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const helmet = require('helmet');
+const { limiterConfig } = require('./config/rateLimiter');
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -27,6 +28,7 @@ app.get('/crash-test', () => {
 });
 
 app.use(requestLogger);
+app.use(limiterConfig);
 app.use(helmet());
 app.use('/', routes);
 
