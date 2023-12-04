@@ -10,10 +10,10 @@ router.post('/signin', validationLogin, login);
 router.post('/signup', validationCreateUser, createUser);
 
 router.use(auth);
+
 router.use('/users', userRouter);
 router.use('/movies', movieRouter);
 
-router.use(auth, userRouter);
 router.use(auth, movieRouter);
 
 router.use('*', (req, res, next) => {
