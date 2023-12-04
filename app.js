@@ -3,11 +3,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const helmet = require('helmet');
-const { limiterConfig } = require('./config/rateLimiter');
-
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { errors } = require('celebrate');
+const { limiterConfig } = require('./config/rateLimiter');
 const errorHandler = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const routes = require('./routes');
